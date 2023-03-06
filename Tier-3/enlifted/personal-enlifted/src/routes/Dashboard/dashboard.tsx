@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {useAuth} from '../auth';
+import {useAuth} from '../../auth';
 
 export default function Dashboard() {
   const auth = useAuth();
