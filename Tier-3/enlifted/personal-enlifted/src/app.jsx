@@ -9,7 +9,7 @@ import {
   Outlet,
 } from 'react-router-dom';
 import {AuthProvider, useAuth} from './auth';
-import Dashboard from './routes/dashboard';
+import Dashboard from './routes/Dashboard/dashboard';
 import {LoginPage} from './routes/login';
 
 export default function App() {
@@ -30,7 +30,7 @@ export default function App() {
   );
 }
 
-function RequireAuth({children}: {children: JSX.Element}) {
+function RequireAuth({children}) {
   let auth = useAuth();
   let location = useLocation();
 
