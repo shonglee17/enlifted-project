@@ -10,67 +10,20 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import BlurCircularIcon from '@mui/icons-material/BlurCircular';
 import { Box } from '@mui/material';
-
-const liveFlows = [
-    {
-        name: 'Flow 1',
-        version: 'V2',
-        published: true,
-        dateMade: '11/2/2020'
-    },
-    {
-        name: 'Flow 3',
-        version: 'V1',
-        published: true,
-        dateMade: '1/7/2020'
-    },
-    {
-        name: 'Gratitude',
-        version: 'V2',
-        published: true,
-        dateMade: '12/2/2019'
-    },
-    {
-        name: 'Flow 3',
-        version: 'V7',
-        published: false,
-        dateMade: '4/2/2019'
-    },
-    {
-        name: 'Smile 1',
-        version: 'V1',
-        published: true,
-        dateMade: '3/6/2019'
-    },
-    {
-        name: 'Gratitude',
-        version: 'V1',
-        published: false,
-        dateMade: '12/2/2018'
-    },
-    {
-        name: 'Flow 1',
-        version: 'V2',
-        published: true,
-        dateMade: '12/2/2019'
-    },
-    {
-        name: 'Origin',
-        version: 'V1',
-        published: true,
-        dateMade: '12/2/2019'
-    }
-]
+import { liveFlows } from '../../Data';
 
 export default function LiveList() {
+const arrToShow = liveFlows.slice(Math.min(liveFlows.length - 10, 0))
+
     return (
         <Box alignItems='stack'>
             <Typography sx={{ color: '#7F95FA' }} variant='h5'>Live</Typography>
             <List sx={{ width: '100%' }}>
-                {liveFlows.map(flow => (
+                {arrToShow.slice(0).reverse().map(flow => (
                 <ListItem 
+                key={flow.id}
                 sx={{margin: '20px 0'}}
-                justifyContent='space-between' >
+                 >
                     <ListItemIcon>
                     
                     {flow.published ? 

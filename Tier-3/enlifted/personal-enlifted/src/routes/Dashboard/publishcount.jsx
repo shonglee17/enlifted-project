@@ -1,7 +1,19 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
+import { liveFlows } from '../../Data'
 
 export default function PublishCount() {
+
+  const liveCount = () => {
+  let x = 0
+  liveFlows.map(flow =>{
+    if(flow.published == true){
+      x += 1
+    }
+  })
+  return x
+}
+
   return (
        <Box width ="100%" m='0 10px'>
       <Box display='flex' >
@@ -22,7 +34,7 @@ export default function PublishCount() {
           fontWeight='bold'
           color='Black'
           >
-            15
+            {liveCount()}
           </Typography>
         </Box>
       </Box>

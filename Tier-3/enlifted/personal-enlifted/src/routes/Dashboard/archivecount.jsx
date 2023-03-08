@@ -2,6 +2,7 @@ import { Box, TextField, Typography } from '@mui/material'
 import { borderRadius } from '@mui/system'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import { liveFlows } from '../../Data'
 
 export default function ArchiveCount() {
 const navigate = useNavigate()
@@ -9,6 +10,18 @@ const handleClick = (e) => {
   e.preventDefault
   navigate('/View')
 }
+
+const archiveCount = () => {
+  let x = 0
+  liveFlows.map(flow =>{
+    if(flow.published == false){
+      x += 1
+    }
+  })
+  return x
+}
+
+
     return (
           <Box width ="100%" m='0 10px'>
       <Box display='flex' >
@@ -29,7 +42,7 @@ const handleClick = (e) => {
           fontWeight='bold'
           color='White'
           >
-            10
+            {archiveCount()}
           </Typography>
         </Box>
       </Box>

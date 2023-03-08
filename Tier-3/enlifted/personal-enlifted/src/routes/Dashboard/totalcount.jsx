@@ -1,7 +1,14 @@
 import { Box, Typography, useTheme } from '@mui/material'
 import React from 'react'
+import { liveFlows } from '../../Data'
 
 export default function TotalCount() {
+
+const liveCount = () => {
+  let x = liveFlows.length
+  return x
+}
+
   return (
     <Box width ="100%" m='0 10px'>
       <Box display='flex' >
@@ -22,7 +29,7 @@ export default function TotalCount() {
           fontWeight='bold'
           color='Black'
           >
-            25
+            {liveCount()}
           </Typography>
         </Box>
       </Box>
