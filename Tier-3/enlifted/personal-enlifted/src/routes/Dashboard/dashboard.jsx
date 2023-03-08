@@ -43,6 +43,7 @@ export default function Dashboard() {
             boxShadow: 1
           }}
         >
+          <CreateFlow/>
         </Box>
 
         <Box
@@ -53,11 +54,11 @@ export default function Dashboard() {
           height='flex'
           p='0 30px'
           mt='25'
-          alignItems='center'
-          justifyContent='center'
+          
+          justifyContent='left'
           borderRadius='20px'
         >
-
+          <LiveList/>
         </Box>
 
 
