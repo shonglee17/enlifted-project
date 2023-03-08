@@ -9,6 +9,7 @@ import {
   Outlet,
 } from 'react-router-dom';
 import {AuthProvider, useAuth} from './auth';
+import Archives from './routes/Archives/archives';
 import Dashboard from './routes/Dashboard/dashboard';
 import {LoginPage} from './routes/login';
 
@@ -21,6 +22,14 @@ export default function App() {
           element={
             <RequireAuth>
               <Dashboard />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/View"
+          element={
+            <RequireAuth>
+              <Archives />
             </RequireAuth>
           }
         />

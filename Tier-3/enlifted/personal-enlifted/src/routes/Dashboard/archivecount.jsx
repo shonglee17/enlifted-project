@@ -1,9 +1,14 @@
 import { Box, TextField, Typography } from '@mui/material'
 import { borderRadius } from '@mui/system'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function ArchiveCount() {
-
+const navigate = useNavigate()
+const handleClick = (e) => {
+  e.preventDefault
+  navigate('/View')
+}
     return (
           <Box width ="100%" m='0 10px'>
       <Box display='flex' >

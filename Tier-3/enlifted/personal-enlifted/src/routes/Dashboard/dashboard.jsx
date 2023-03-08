@@ -6,6 +6,7 @@ import LiveList from './livelist';
 import PublishCount from './publishcount';
 import TotalCount from './totalcount.jsx';
 import { Box, Typography } from '@mui/material';
+import { liveFlows } from '../../Data';
 
 export default function Dashboard() {
   const auth = useAuth();
@@ -13,7 +14,6 @@ export default function Dashboard() {
   function handleSignOut() {
     auth.signout(() => { });
   }
-
 
   return (
     <Box m='20px'>
@@ -29,7 +29,7 @@ export default function Dashboard() {
         gap='20px'
       >
         <Box
-          gridColumn='span 36'
+          gridColumn='span 33'
           gridRow='span 20'
           backgroundColor='#ffffff'
           display='flex'
@@ -47,7 +47,7 @@ export default function Dashboard() {
         </Box>
 
         <Box
-          gridColumn='span 9'
+          gridColumn='span 12'
           gridRow='span 30'
 
           display='flex'
@@ -63,7 +63,7 @@ export default function Dashboard() {
 
 
         <Box
-          gridColumn='span 12'
+          gridColumn='span 11'
           gridRow='span 10'
           backgroundColor='#ffffff'
           display='flex'
@@ -81,7 +81,7 @@ export default function Dashboard() {
         </Box>
 
         <Box
-          gridColumn='span 12'
+          gridColumn='span 11'
           gridRow='span 10'
           backgroundColor='#ffffff'
           display='flex'
@@ -100,7 +100,7 @@ export default function Dashboard() {
         </Box>
 
         <Box
-          gridColumn='span 12'
+          gridColumn='span 11'
           gridRow='span 10'
           backgroundColor='#6B85FB'
           display='flex'
