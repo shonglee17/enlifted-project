@@ -11,6 +11,10 @@ import {
 import {AuthProvider, useAuth} from './auth';
 import Dashboard from './routes/Dashboard/dashboard';
 import {LoginPage} from './routes/login';
+//tou
+// import { Provider } from "./store";
+// import Nav from './Nav/Nav';
+
 
 export default function App() {
   return (
@@ -20,6 +24,7 @@ export default function App() {
           path="/"
           element={
             <RequireAuth>
+              
               <Dashboard />
             </RequireAuth>
           }
