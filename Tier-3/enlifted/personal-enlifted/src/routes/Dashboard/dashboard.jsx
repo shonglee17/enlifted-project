@@ -30,12 +30,10 @@ export default function Dashboard() {
     <h1> This is where the Nav Bar will go!</h1>
     </Box>
   </nav> */}
-<Box>
-  <provider>
-    <Nav />
-  </provider>
+<Box sx={{ borderRadius: '20px !important' }}>
+  <Nav />
 </Box>
-    <Box m='20px'>
+    <Box mt='-40px'>
       <Box display='flex' justifyContent='space-between' alignItems='center'>
         <h1> welcome {auth.user.username}</h1>
       </Box>
@@ -114,7 +112,7 @@ export default function Dashboard() {
 
           <PublishCount />
         </Box>
-        
+
         <Box
           gridColumn='span 12'
           gridRow='span 10'
