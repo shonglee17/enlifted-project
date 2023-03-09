@@ -6,7 +6,7 @@ import LiveList from './livelist';
 import PublishCount from './publishcount';
 import TotalCount from './totalcount.jsx';
 import { Box, Typography } from '@mui/material';
-// import Nav from '../../Nav/Nav';// will not take
+import Nav from '../../Nav/Nav';// will not take
 
 
 export default function Dashboard() {
@@ -19,7 +19,7 @@ export default function Dashboard() {
 
   return (
     <>
-  <nav style={{ margin: '1px', border: '1px solid black',marginBottom: '-20px', maxWidth:'1079px' }}>
+  {/* <nav style={{ margin: '1px', border: '1px solid black',marginBottom: '-20px', maxWidth:'1079px' }}>
     <Box 
       display='grid'
       gridAutoRows='77px'
@@ -29,8 +29,12 @@ export default function Dashboard() {
     >
     <h1> This is where the Nav Bar will go!</h1>
     </Box>
-  </nav>
-
+  </nav> */}
+<Box>
+  <provider>
+    <Nav />
+  </provider>
+</Box>
     <Box m='20px'>
       <Box display='flex' justifyContent='space-between' alignItems='center'>
         <h1> welcome {auth.user.username}</h1>
@@ -110,7 +114,7 @@ export default function Dashboard() {
 
           <PublishCount />
         </Box>
-
+        
         <Box
           gridColumn='span 12'
           gridRow='span 10'

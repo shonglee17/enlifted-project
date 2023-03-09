@@ -24,8 +24,9 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import LogoutIcon from '@mui/icons-material/Logout';
 
 
-function Nav() {
-    const user = useSelector((store) => store.user);
+export default function Nav() {
+    // const user = useSelector((store) => store.user);
+    // console.log(user);
     const [anchorEl, setAnchorEl] = useState(null);
 
     const handleClick = (event) => {
@@ -42,7 +43,7 @@ function Nav() {
             <Link to="/home">
                 <img
                     className="nav-logo"
-                    src="/enlightedLogo/footer-logo.png"
+                    src="/enliftedLog/footer-logo.png"
                     alt="Logo"
                     style={{ width: '175px', height: '87px' }}
                 />
@@ -109,7 +110,7 @@ function Nav() {
                         Info Page
                     </Link>
                 </MenuItem>
-                {user.id ? (
+                {/* { (
                     <>
                         <MenuItem onClick={handleClose}>
                         <LogoutIcon sx={{ mr: 1,}} />
@@ -119,7 +120,7 @@ function Nav() {
                             />
                         </MenuItem>
                     </>
-                ) : (
+                )  */}
                     <>
                         <MenuItem onClick={handleClose}>
                             <Link
@@ -132,7 +133,6 @@ function Nav() {
                             </Link>
                         </MenuItem>
                     </>
-                )}
                 <MenuItem onClick={handleClose}>
                 <HelpOutlineIcon sx={{ mr: 1 }} />
                     <Link
@@ -148,4 +148,3 @@ function Nav() {
     );
 }
 
-export default Nav;
