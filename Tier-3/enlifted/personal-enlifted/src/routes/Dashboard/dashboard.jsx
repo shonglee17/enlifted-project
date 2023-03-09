@@ -5,11 +5,17 @@ import CreateFlow from './createflow';
 import LiveList from './livelist';
 import PublishCount from './publishcount';
 import TotalCount from './totalcount.jsx';
-import { Box, Typography } from '@mui/material';
+import { Box, Tooltip, Typography } from '@mui/material';
 import { liveFlows } from '../../Data';
+import { useNavigate } from 'react-router-dom';
 
 export default function Dashboard() {
   const auth = useAuth();
+  const navigate = useNavigate()
+  const handleClick = (e) => {
+  e.preventDefault
+  navigate('/View')
+}
 
   function handleSignOut() {
     auth.signout(() => { });
@@ -99,7 +105,9 @@ export default function Dashboard() {
           <PublishCount />
         </Box>
 
+        <Tooltip title="Archive" followCursor>
         <Box
+         onClick={handleClick}
           gridColumn='span 11'
           gridRow='span 10'
           backgroundColor='#6B85FB'
@@ -111,11 +119,12 @@ export default function Dashboard() {
           justifyContent='center'
           borderRadius='20px'
           sx={{
-            boxShadow: 1
+            boxShadow: 1,
           }}
         >
           <ArchiveCount />
         </Box>
+        </Tooltip>
 
       </Box>
     </Box>

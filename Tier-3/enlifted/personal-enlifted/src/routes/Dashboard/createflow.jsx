@@ -5,12 +5,9 @@ import { useNavigate } from 'react-router-dom'
 export default function CreateFlow() {
 const navigate = useNavigate()
 
-const handleClick = (e) => {
-  e.preventDefault
-  navigate('/View')
-}
+
 
   return (
-<h1 onClick={handleClick}>creative flow</h1>
+<h1>creative flow</h1>
   )
 }

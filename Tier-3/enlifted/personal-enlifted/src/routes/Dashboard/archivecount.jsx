@@ -5,11 +5,8 @@ import { useNavigate } from 'react-router-dom'
 import { liveFlows } from '../../Data'
 
 export default function ArchiveCount() {
-const navigate = useNavigate()
-const handleClick = (e) => {
-  e.preventDefault
-  navigate('/View')
-}
+
+
 
 const archiveCount = () => {
   let x = 0
@@ -23,7 +20,7 @@ const archiveCount = () => {
 
 
     return (
-          <Box width ="100%" m='0 10px'>
+          <Box width ="100%" m='0 10px' >
       <Box display='flex' >
         <Box m='0 -20px 20px 0%'>
           <Typography
