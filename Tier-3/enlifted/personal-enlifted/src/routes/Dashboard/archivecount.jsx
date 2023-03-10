@@ -20,7 +20,7 @@ const archiveCount = () => {
 
 
     return (
-          <Box width ="100%" m='0 10px' >
+          <Box width ="100%" m='0 10px'>
       <Box display='flex' >
         <Box m='0 -20px 20px 0%'>
           <Typography

@@ -9,13 +9,20 @@ import { Box, Tooltip, Typography } from '@mui/material';
 import { liveFlows } from '../../Data';
 import { useNavigate } from 'react-router-dom';
 
+
 export default function Dashboard() {
   const auth = useAuth();
   const navigate = useNavigate()
-  const handleClick = (e) => {
+  const handleClickArchive = (e) => {
   e.preventDefault
   navigate('/View')
-}
+  }
+
+  const handleClickBuild = (e) => {
+  e.preventDefault
+  navigate('/Constructor')
+  }
+
 
   function handleSignOut() {
     auth.signout(() => { });
@@ -35,6 +42,7 @@ export default function Dashboard() {
         gap='20px'
       >
         <Box
+          onClick={handleClickBuild}
           gridColumn='span 33'
           gridRow='span 20'
           backgroundColor='#ffffff'
@@ -108,7 +116,7 @@ export default function Dashboard() {
 
         <Tooltip title="Archive" followCursor>
         <Box
-         onClick={handleClick}
+         onClick={handleClickArchive}
           gridColumn='span 11'
           gridRow='span 10'
           backgroundColor='#6B85FB'
