@@ -9,9 +9,12 @@ import {
   Outlet,
 } from 'react-router-dom';
 import {AuthProvider, useAuth} from './auth';
+import Archives from './routes/Archives/archives';
 import Dashboard from './routes/Dashboard/dashboard';
-import AddStep from './routes/FlowConstructor/Stepbar/addstep';
+import FlowConstructor from './routes/FlowConstructor/flowconstructor';
+
 import {LoginPage} from './routes/login';
+
 
 export default function App() {
   return (
@@ -26,13 +29,25 @@ export default function App() {
           }
         />
         <Route
-          path="/addStep"
+
+          path="/View"
           element={
             <RequireAuth>
-              <AddStep />
+              <Archives />
             </RequireAuth>
           }
         />
+         
+        <Route
+          path="/Constructor"
+          element={
+            <RequireAuth>
+              <FlowConstructor />
+            </RequireAuth>
+          }
+        />
+        
+
         <Route path="/login" element={<LoginPage />} />
       </Routes>
     </AuthProvider>
