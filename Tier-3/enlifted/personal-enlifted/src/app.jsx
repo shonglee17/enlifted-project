@@ -12,6 +12,7 @@ import {AuthProvider, useAuth} from './auth';
 import Archives from './routes/Archives/archives';
 import Dashboard from './routes/Dashboard/dashboard';
 import FlowConstructor from './routes/FlowConstructor/flowconstructor';
+
 import {LoginPage} from './routes/login';
 
 
@@ -28,6 +29,7 @@ export default function App() {
           }
         />
         <Route
+
           path="/View"
           element={
             <RequireAuth>
@@ -45,6 +47,7 @@ export default function App() {
           }
         />
         
+
         <Route path="/login" element={<LoginPage />} />
       </Routes>
     </AuthProvider>
