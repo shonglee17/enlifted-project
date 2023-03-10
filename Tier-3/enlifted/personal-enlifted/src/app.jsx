@@ -10,6 +10,7 @@ import {
 } from 'react-router-dom';
 import {AuthProvider, useAuth} from './auth';
 import Dashboard from './routes/Dashboard/dashboard';
+import AddStep from './routes/FlowConstructor/Stepbar/addstep';
 import {LoginPage} from './routes/login';
 
 export default function App() {
@@ -21,6 +22,14 @@ export default function App() {
           element={
             <RequireAuth>
               <Dashboard />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/addStep"
+          element={
+            <RequireAuth>
+              <AddStep />
             </RequireAuth>
           }
         />
