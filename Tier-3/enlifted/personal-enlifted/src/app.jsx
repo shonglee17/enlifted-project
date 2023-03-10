@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Provider } from 'react-redux';
 import {
   Routes,
   Route,
@@ -9,6 +10,7 @@ import {
   Outlet,
 } from 'react-router-dom';
 import {AuthProvider, useAuth} from './auth';
+import store from './Redux/store';
 import Archives from './routes/Archives/archives';
 import Dashboard from './routes/Dashboard/dashboard';
 import FlowConstructor from './routes/FlowConstructor/flowconstructor';
@@ -19,6 +21,7 @@ import {LoginPage} from './routes/login';
 export default function App() {
   return (
     <AuthProvider>
+      <Provider store={store}>
       <Routes>
         <Route
           path="/"
@@ -50,6 +53,7 @@ export default function App() {
 
         <Route path="/login" element={<LoginPage />} />
       </Routes>
+      </Provider>
     </AuthProvider>
   );
 }

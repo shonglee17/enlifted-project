@@ -40,7 +40,7 @@ export default function AddStep() {
 
   }
   
-  // const reducerTest = useSelector((store) => store.flowStepReducer)
+  const reducerTest = useSelector((store) => store.flowStepReducer)
   const dispatch = useDispatch();
   // State will also have to represent the previous flow steps to be called on when moving backwards
   // This will work better in a reducer,  but state for  demo:
@@ -51,7 +51,12 @@ export default function AddStep() {
     {id: 4, title: 'Flow Four'}
   ]);
   
-  
+  useEffect(() => {
+    dispatch({ 
+      type: 'ADD_FLOW_REDUCER',
+      payload: 'hello'
+      });
+  }, []);
   // This is the function that adds the current flow to the demo state
   const  addFlowStep = () => {
     setDemo([...demo,  {id: 6, title: 'Flow Six'}])

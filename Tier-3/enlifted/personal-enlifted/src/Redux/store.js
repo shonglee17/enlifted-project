@@ -1,11 +1,17 @@
-import { configureStore } from '@reduxjs/toolkit'
-import flowStepReducer from './reducers/flowStep.reducer'
+import { createStore, applyMiddleware } from 'redux';
+import rootReducer from './reducers/_root.reducer';
 
-const store = configureStore({
-  reducer: { 
-    flowStep: flowStepReducer,
-  },
-})
+
+
+
+
+
+
+const store = createStore(
+  rootReducer,
+
+  applyMiddleware(),
+);
+
 
 export default store;
-
