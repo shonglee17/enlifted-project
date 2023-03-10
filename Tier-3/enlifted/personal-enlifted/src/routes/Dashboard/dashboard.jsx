@@ -48,6 +48,7 @@ export default function Dashboard() {
           sx={{
             boxShadow: 1
           }}
+          alignContent= 'center'
         >
           <CreateFlow/>
         </Box>
