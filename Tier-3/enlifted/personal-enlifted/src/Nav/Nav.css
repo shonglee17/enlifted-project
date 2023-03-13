@@ -43,3 +43,8 @@
     background: linear-gradient(90deg, rgba(87,23,157,1) 26%, rgba(110,15,145,1) 84%);
   }
   
+  .nav-logo img {
+    filter: invert(100%);
+}
+
+

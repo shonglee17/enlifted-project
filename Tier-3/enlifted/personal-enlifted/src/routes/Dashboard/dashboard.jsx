@@ -5,9 +5,8 @@ import CreateFlow from './createflow';
 import LiveList from './livelist';
 import PublishCount from './publishcount';
 import TotalCount from './totalcount.jsx';
-import { Box, Typography } from '@mui/material';
-import Nav from '../../Nav/Nav';// will not take
-
+import { Box, Typography } from '@mui/material';//*need this for nav
+import Nav from '../../Nav/Nav';// will not take //*need this for nav
 
 export default function Dashboard() {
   const auth = useAuth();
@@ -16,20 +15,8 @@ export default function Dashboard() {
     auth.signout(() => { });
   }
 
-
   return (
     <>
-  {/* <nav style={{ margin: '1px', border: '1px solid black',marginBottom: '-20px', maxWidth:'1079px' }}>
-    <Box 
-      display='grid'
-      gridAutoRows='77px'
-      alignItems='center'
-      paddingLeft='15px'
-      maxWidth='900px'
-    >
-    <h1> This is where the Nav Bar will go!</h1>
-    </Box>
-  </nav> */}
 <Box sx={{ borderRadius: '20px !important' }}>
   <Nav />
 </Box>
@@ -74,7 +61,6 @@ export default function Dashboard() {
           borderRadius='20px'
         >
         </Box>
-
 
         <Box
           gridColumn='span 12'

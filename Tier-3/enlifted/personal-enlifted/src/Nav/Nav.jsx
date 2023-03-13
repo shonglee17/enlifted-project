@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import './Nav.css';
 import { useSelector } from 'react-redux';
 import HomeIcon from '@mui/icons-material/Home';
-
 // MUI imports below
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -22,6 +21,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import AnnouncementIcon from '@mui/icons-material/Announcement';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import LogoutIcon from '@mui/icons-material/Logout';
+//menu drop down
 
 
 export default function Nav() {
@@ -37,6 +37,18 @@ export default function Nav() {
         setAnchorEl(null);
     };
 
+//this will link them to the contact section
+const handleContact = () =>{
+
+};
+
+
+
+
+    //this is to make the save & publish button render
+    //base off use is logged in or not. 
+    //we will need to hook this up to the login component. 
+    const isLoggedIn = true
 
     return (
         <div className="nav">
@@ -49,25 +61,19 @@ export default function Nav() {
                 />
             </Link>
 {/* ///////////////////conditionally render buttons//////////////// */}
-            {/* {props.showButtons && 
-                <Box sx={{ flexGrow: 1 }}>
-                    <Button
-                        size="medium"
-                        color="secondary"
-                        variant="contained"
-                        style={{ marginRight: 10 }}
-                    >
-                        Save
-                    </Button>
-                    <Button
-                        size="medium"
-                        color="secondary"
-                        variant="contained"
-                    >
-                        Publish
-                    </Button>
-                </Box>
-            } */}
+<Box sx={{ flexGrow: 1, marginRight: 'px'}}>
+  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end', gap: '10px' }}>
+    {
+      isLoggedIn ? <button style={{ padding: '10px 20px', borderRadius: '20px', background: '#151d92', color: '#fff', border: 'none' }}>Save</button>
+      :  <h3>No Access!</h3>
+    }
+    {
+      isLoggedIn ? <button style={{ padding: '10px 20px', borderRadius: '20px', background: '#008CBA', color: '#fff', border: 'none' }}>Publish</button>
+      : <h3>Login Please</h3>
+    }
+  </div>
+</Box>
+
 {/* ///////////////////conditionally render buttons//////////////// */}
 
             <Box sx={{ flexGrow: 1 }}></Box>
@@ -93,23 +99,29 @@ export default function Nav() {
                 <MenuItem onClick={handleClose}>
                 <HomeIcon sx={{ mr: 1 }} />
                     <Link
-                        to="/home"
+                        to="/"
                         className="navLink"
                         style={{ color: 'black', width:80, maxWidth: '100%'  }}
                     >
                         Home
                     </Link>
                 </MenuItem>
-                <MenuItem onClick={handleClose}>
+                <MenuItem onClick={() => window.location.href='https://enlifted.me/contact/'}>
+  <AnnouncementIcon sx={{ mr: 1 }} />
+  Contact Us
+</MenuItem>
+
+                {/* //OLD */}
+                {/* <MenuItem onClick={handleClose}>
                 <AnnouncementIcon sx={{ mr: 1 }} />
                     <Link
                         to="/info"
                         className="navLink"
                         style={{ color: 'black', width:80, maxWidth: '100%' }}
                     >
-                        Info Page
+                        Contact Us
                     </Link>
-                </MenuItem>
+                </MenuItem> */}
                 {/* { (
                     <>
                         <MenuItem onClick={handleClose}>
@@ -121,7 +133,7 @@ export default function Nav() {
                         </MenuItem>
                     </>
                 )  */}
-                    <>
+                    {/* <> we dont need?????!!!!!!!!!
                         <MenuItem onClick={handleClose}>
                             <Link
                                 to="/login"
@@ -132,15 +144,15 @@ export default function Nav() {
                                 Login/Register
                             </Link>
                         </MenuItem>
-                    </>
+                    </> */}
                 <MenuItem onClick={handleClose}>
                 <HelpOutlineIcon sx={{ mr: 1 }} />
                     <Link
-                        to="/about"
+                        to='about'
                         className="navLink"
                         style={{ color: 'black', width:80, maxWidth: '100%' }}
                     >
-                        About
+                        About Us
                     </Link>
                 </MenuItem>
             </Menu>
@@ -148,3 +160,23 @@ export default function Nav() {
     );
 }
 
+
+
+
+
+
+{/* <Box sx={{ flexGrow: 1 }}>
+  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end', gap: '10px' }}>
+    {
+      isLoggedIn ? <button style={{ padding: '10px 20px', borderRadius: '20px', background: '#151d92', color: '#fff', border: 'none' }}>Save</button>
+      :  <h3>No Access!</h3>
+    }
+    {
+      isLoggedIn ? <button style={{ padding: '10px 20px', borderRadius: '20px', background: '#008CBA', color: '#fff', border: 'none' }}>Publish</button>
+      : <h3>Login Please</h3>
+    }
+  </div>
+</Box> */}
+
+
+// marginLeft: '345px'

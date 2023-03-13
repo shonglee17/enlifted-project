@@ -12,8 +12,7 @@ import {AuthProvider, useAuth} from './auth';
 import Dashboard from './routes/Dashboard/dashboard';
 import {LoginPage} from './routes/login';
 //tou
-// import { Provider } from "./store";
-// import Nav from './Nav/Nav';
+import About from './About/About';
 
 
 export default function App() {
@@ -28,6 +27,7 @@ export default function App() {
             </RequireAuth>
           }
         />
+        <Route path='/about' element={<About />}/>
         <Route path="/login" element={<LoginPage />} />
       </Routes>
     </AuthProvider>
