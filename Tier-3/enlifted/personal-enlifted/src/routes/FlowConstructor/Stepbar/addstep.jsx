@@ -133,7 +133,7 @@ export default function AddStep() {
           </React.Fragment>
         ))}
     </div>
-    <form>
+    {/* <form>
       {inputFileds.map((input,  index) => {
         return ( 
           <div key={index}>
@@ -148,7 +148,7 @@ export default function AddStep() {
         )
       })}
     </form>
-    <button onClick={addInput}>Click Me</button>
+    <button onClick={addInput}>Click Me</button> */}
     </>
   )
 }
