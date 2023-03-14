@@ -23,7 +23,6 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import LogoutIcon from '@mui/icons-material/Logout';
 //menu drop down
 
-
 export default function Nav() {
     // const user = useSelector((store) => store.user);
     // console.log(user);
@@ -37,11 +36,6 @@ export default function Nav() {
         setAnchorEl(null);
     };
 
-//this will link them to the contact section
-const handleContact = () =>{
-
-};
-
     //this is to make the save & publish button render
     //base off use is logged in or not. 
     //we will need to hook this up to the login component. 
@@ -49,7 +43,7 @@ const handleContact = () =>{
 
     return (
         <div className="nav">
-            <Link to="/home">
+            <Link to="/">
                 <img
                     className="nav-logo"
                     src="/enliftedLog/footer-logo.png"

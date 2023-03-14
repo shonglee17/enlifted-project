@@ -13,7 +13,8 @@ import Dashboard from './routes/Dashboard/dashboard';
 import {LoginPage} from './routes/login';
 //tou
 import About from './About/About';
-
+// import Nav from './Nav/Nav.jsx';// will not work
+// import { Box, Typography } from '@mui/material';
 
 export default function App() {
   return (
