@@ -23,7 +23,7 @@ export default function App() {
           path="/"
           element={
             <RequireAuth>
-              <Dashboard />
+              <Dashboard path/>
             </RequireAuth>
           }
         />
