@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 export default function View() {
   return (
     <>
-    <h1>Hello View</h1>
+    <h1 position='absolute'>Hello View</h1>
     </>
   )
 }

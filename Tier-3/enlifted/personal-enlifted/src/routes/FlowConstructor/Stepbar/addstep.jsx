@@ -84,13 +84,11 @@ export default function AddStep() {
     setState({ ...state, [anchor]: open });
   };
 
-  const list = (anchor) => (
-    <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
-      role="presentation"
-      // onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
+
+
+  return (
+    <>
+  <Box>
         <List>
           {demo.map((item) => (
             <ListItem key={item.id} disablePadding>
@@ -113,42 +111,29 @@ export default function AddStep() {
           </ListItem>
         ))}
       </List>
-    </Box>
-  );
-
-  return (
-    <>
-    <div>
-        {['right'].map((anchor) => (
-          <React.Fragment key={anchor}>
-            <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
-            <SwipeableDrawer
-              anchor={anchor}
-              open={state[anchor]}
-              onClose={toggleDrawer(anchor, false)}
-              onOpen={toggleDrawer(anchor, true)}
-            >
-              {list(anchor)}
-            </SwipeableDrawer>
-          </React.Fragment>
-        ))}
-    </div>
-    {/* <form>
-      {inputFileds.map((input,  index) => {
-        return ( 
-          <div key={index}>
-            <TextField
-              id="outlined-multiline-static"
-              label="Multiline"
-              multiline
-              rows={4}
-              defaultValue="Default Value"
-            />            
-          </div>
-        )
-      })}
-    </form>
-    <button onClick={addInput}>Click Me</button> */}
+      </Box>
     </>
   )
 }
+
+
+
+
+
+
+    // <form>
+    //   {inputFileds.map((input,  index) => {
+    //     return ( 
+    //       <div key={index}>
+    //         <TextField
+    //           id="outlined-multiline-static"
+    //           label="Multiline"
+    //           multiline
+    //           rows={4}
+    //           defaultValue="Default Value"
+    //         />            
+    //       </div>
+    //     )
+    //   })}
+    // </form>
+    // <button onClick={addInput}>Click Me</button>
