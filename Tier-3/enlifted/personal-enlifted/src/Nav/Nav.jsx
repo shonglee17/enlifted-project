@@ -42,9 +42,6 @@ const handleContact = () =>{
 
 };
 
-
-
-
     //this is to make the save & publish button render
     //base off use is logged in or not. 
     //we will need to hook this up to the login component. 
@@ -65,11 +62,11 @@ const handleContact = () =>{
   <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end', gap: '10px' }}>
     {
       isLoggedIn ? <button style={{ padding: '10px 20px', borderRadius: '20px', background: '#151d92', color: '#fff', border: 'none' }}>Save</button>
-      :  <h3>No Access!</h3>
+      :  <h3></h3>
     }
     {
       isLoggedIn ? <button style={{ padding: '10px 20px', borderRadius: '20px', background: '#008CBA', color: '#fff', border: 'none' }}>Publish</button>
-      : <h3>Login Please</h3>
+      : <h3></h3>
     }
   </div>
 </Box>

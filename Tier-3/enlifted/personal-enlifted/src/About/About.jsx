@@ -14,31 +14,37 @@ function About() {
         </Box>
     <div className="container">
       <h3>Who are we?</h3>
-      <ul>
-        <li>
+      <div>
+        <div>
+            <p>
         At Enlifted, we are dedicated to transforming the world through the
         power of language. Our proven system empowers individuals to break free
         from self-imposed limitations and unlock their full potential by
         mastering their words. 
-        </li>
+            </p>
+        </div>
 
-        <li>
+        <div>
+            <p>
         With a team of highly-skilled coaches and
         leaders, we have helped countless individuals and organizations achieve
         unprecedented levels of success. Our approach is grounded in science and
         enriched by practical magic, ensuring that every client receives a
         comprehensive and personalized experience. 
-        </li>
+            </p>
+        </div>
 
-        <li>
+        <div>
+            <p>
         Whether you're a coach
         looking to enhance your skills, a business leader striving for greater
         success, or an individual seeking to break free from limiting beliefs,
         Enlifted has the tools and expertise to guide you towards your goals.
         Join our community today and discover the transformative power of
         language.
-        </li>
-      </ul>
+            </p>
+        </div>
+      </div>
     </div>
     </>
   );
