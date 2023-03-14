@@ -13,13 +13,15 @@ import Dashboard from './routes/Dashboard/dashboard';
 import {LoginPage} from './routes/login';
 //tou
 import About from './About/About';
-// import Nav from './Nav/Nav.jsx';// will not work
+import Nav from './Nav/Nav';
 // import { Box, Typography } from '@mui/material';
 
 export default function App() {
   return (
     <AuthProvider>
+      
       <Routes>
+      
         <Route
           path="/"
           element={
@@ -28,6 +30,7 @@ export default function App() {
             </RequireAuth>
           }
         />
+        
         <Route path='/about' element={<About />}/>
         <Route path="/login" element={<LoginPage />} />
       </Routes>

@@ -18,7 +18,7 @@ export default function Dashboard() {
   return (
     <>
 <Box sx={{ borderRadius: '20px !important' }}>
-  <Nav />
+  
 </Box>
     <Box mt='-40px'>
       <Box display='flex' justifyContent='space-between' alignItems='center'>

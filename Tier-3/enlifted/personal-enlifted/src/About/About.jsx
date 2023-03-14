@@ -10,7 +10,7 @@ function About() {
   return (
     <>
         <Box sx={{ borderRadius: '20px !important' }}>
-            <Nav />
+            
         </Box>
     <div className="container">
       <h3>Who are we?</h3>

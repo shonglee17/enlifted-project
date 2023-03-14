@@ -39,7 +39,7 @@ export default function Nav() {
     //this is to make the save & publish button render
     //base off use is logged in or not. 
     //we will need to hook this up to the login component. 
-    const isLoggedIn = true
+    const isLoggedIn = false
 
     return (
         <div className="nav">
@@ -56,7 +56,7 @@ export default function Nav() {
   <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'flex-end', gap: '10px' }}>
     {
       isLoggedIn ? <button style={{ padding: '10px 20px', borderRadius: '20px', background: '#151d92', color: '#fff', border: 'none' }}>Save</button>
-      :  <h3></h3>
+      :  <></>
     }
     {
       isLoggedIn ? <button style={{ padding: '10px 20px', borderRadius: '20px', background: '#008CBA', color: '#fff', border: 'none' }}>Publish</button>
@@ -102,40 +102,6 @@ export default function Nav() {
   Contact Us
 </MenuItem>
 
-                {/* //OLD */}
-                {/* <MenuItem onClick={handleClose}>
-                <AnnouncementIcon sx={{ mr: 1 }} />
-                    <Link
-                        to="/info"
-                        className="navLink"
-                        style={{ color: 'black', width:80, maxWidth: '100%' }}
-                    >
-                        Contact Us
-                    </Link>
-                </MenuItem> */}
-                {/* { (
-                    <>
-                        <MenuItem onClick={handleClose}>
-                        <LogoutIcon sx={{ mr: 1,}} />
-                            <LogOutButton
-                                className="navLink"
-                                style={{ color: 'black', width:80, maxWidth: '100%', }}
-                            />
-                        </MenuItem>
-                    </>
-                )  */}
-                    {/* <> we dont need?????!!!!!!!!!
-                        <MenuItem onClick={handleClose}>
-                            <Link
-                                to="/login"
-                                className="navLink"
-                                style={{ color: 'black' }}
-                            >
-                                <AdbIcon sx={{ mr: 1 }} />
-                                Login/Register
-                            </Link>
-                        </MenuItem>
-                    </> */}
                 <MenuItem onClick={handleClose}>
                 <HelpOutlineIcon sx={{ mr: 1 }} />
                     <Link
@@ -171,3 +137,38 @@ export default function Nav() {
 
 
 // marginLeft: '345px'
+
+{/* //OLD */}
+                {/* <MenuItem onClick={handleClose}>
+                <AnnouncementIcon sx={{ mr: 1 }} />
+                    <Link
+                        to="/info"
+                        className="navLink"
+                        style={{ color: 'black', width:80, maxWidth: '100%' }}
+                    >
+                        Contact Us
+                    </Link>
+                </MenuItem> */}
+                {/* { (
+                    <>
+                        <MenuItem onClick={handleClose}>
+                        <LogoutIcon sx={{ mr: 1,}} />
+                            <LogOutButton
+                                className="navLink"
+                                style={{ color: 'black', width:80, maxWidth: '100%', }}
+                            />
+                        </MenuItem>
+                    </>
+                )  */}
+                    {/* <> we dont need?????!!!!!!!!!
+                        <MenuItem onClick={handleClose}>
+                            <Link
+                                to="/login"
+                                className="navLink"
+                                style={{ color: 'black' }}
+                            >
+                                <AdbIcon sx={{ mr: 1 }} />
+                                Login/Register
+                            </Link>
+                        </MenuItem>
+                    </> */}
